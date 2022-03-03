@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Mata Kuliah PBW">
+        <meta name="author" content=" Irna Purnahasanah">
+
+        <title> Kalkulator </title>
+
+        <style>
+            *{
+                font-family: "poppins";
+            }
+
+            .main{
+                width: 600px;
+                margin: auto;
+                padding: 80px 15px;
+            }
+
+            .judul{
+                border-radius: 8px 8px 0 0;
+                padding: 20px 15px;
+                border: 2px solid black;
+            }
+
+            .judul_1{
+                    text-align: center;
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 32px;
+            }
+
+            .judul_2{
+                text-align: center;
+            }
+
+            .inputan{
+                border: 1px solid black;
+                border-radius: 0 0 8px 8px;
+                bottom: 0;
+                line-height: 32px;
+                padding: 15px 15px;
+            }
+
+            #a{
+                width: 99%;
+            }
+
+            #b{
+                width: 99%;
+            }
+
+            #hasil{
+                width: 99%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <script>
+            const tambah = () => {
+                let a=parseFloat(document.kalku.a.value);
+                let b=parseFloat(document.kalku.b.value);
+                let hasil = a + b;
+
+                document.kalku.hasil.value=hasil;
+            }
+
+            const kurang = () => {
+                let a=parseFloat(document.kalku.a.value);
+                let b=parseFloat(document.kalku.b.value);
+                let hasil = a - b;
+
+                document.kalku.hasil.value=hasil;
+            }
+
+            const kali = () => {
+                let a=parseFloat(document.kalku.a.value);
+                let b=parseFloat(document.kalku.b.value);
+                let hasil = a * b;
+
+                document.kalku.hasil.value=hasil;
+            }
+
+            const bagi = () => {
+                let a=parseFloat(document.kalku.a.value);
+                let b=parseFloat(document.kalku.b.value);
+                let hasil = a / b;
+
+                document.kalku.hasil.value=hasil;
+            }
+
+            const modulus = () => {
+                let a=parseFloat(document.kalku.a.value);
+                let b=parseFloat(document.kalku.b.value);
+                let hasil = a % b;
+
+                document.kalku.hasil.value=hasil;
+            }
+        </script>
+
+    <form name="kalku">
+        <div class="main" name="fib">
+            <div class="judul">
+                <div class="judul_1"> Kalkulator </div>
+                <div class="judul_2"> By : Irna Purnahasanah | 20 1063 1170 014 </div>
+            </div>
+            
+            <div class="inputan">
+                <label for="a"> Masukan Angka a : </label>
+        
+                    <div class="input1">
+                        <input type="number" class="input" name="a" id="a" >
+                    </div>
+
+                <label for="b"> Masukan Angka b : </label>
+        
+                    <div class="input2">
+                        <input type="number" class="input" name="b" id="b" >
+                    </div>
+
+                <label for="hasil"> Hasil : </label>
+        
+                    <div class="output">
+                        <input class="output" name="hasil" id="hasil" >
+                    </div>
+
+                    <div class="button">
+                        <button class   = "btn" onclick="tambah()" value="  +  "> + </button>
+                        <button class   = "btn" onclick="kurang()" value="  -  "> - </button>
+                        <button class   = "btn" onclick="kali()" value="  x  "> x </button>
+                        <button class   = "btn" onclick="bagi()" value="  ÷  "> : </button>
+                        <button class   = "btn" onclick="modulus()" value="  %  "> % </button>
+                    </div>
+            </div>
+        </div>
+    </form>
+    
+    </body>
+</html>

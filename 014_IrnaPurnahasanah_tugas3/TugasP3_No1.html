@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Mata Kuliah PBW">
+        <meta name="author" content=" Irna Purnahasanah">
+
+        <title>Deret Fibonacci</title>
+
+        <!-- CSS Internal, tag = style -->
+
+        <style>
+            *{
+                font-family: "poppins";
+            }
+
+            .main{
+                width: 600px;
+                margin: auto;
+                padding: 80px 15px;
+            }
+
+            .judul{
+                border-radius: 8px 8px 0 0;
+                padding: 20px 15px;
+                border: 2px solid black;
+            }
+
+            .judul_1{
+                    text-align: center;
+                    font-size: 25px;
+                    font-weight: 600;
+                    line-height: 32px;
+            }
+
+            .judul_2{
+                text-align: center;
+            }
+
+            .inputan{
+                border: 1px solid black;
+                border-radius: 0 0 8px 8px;
+                bottom: 0;
+                line-height: 32px;
+                padding: 15px 15px;
+            }
+
+            #inderet{
+                width: 99%;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <!-- JAVASCRIPT INTERNAL. tag = script -->
+        <script>
+            function fibonacci(){
+            let deret = parseFloat(document.masukan.deret.value);
+            let past = 1, current = 1, next;
+            document.write('<span style="font-family: Poppins;"><b> Hasil Deret Fibonacci:<br> </b></span')
+                document.write(deret+" <br> ")
+        
+                for (let i = 1; i <= deret; i++) {
+                    document.write(past+", ")
+                    next = past + current;
+                    past = current;
+                    current = next;
+                }   
+            }
+        </script>
+        
+        <form name="masukan">
+            <div class="main" name="fib">
+
+                <div class="judul">
+                    <div class="judul_1"> Deret Fibonacci </div>
+                    <div class="judul_2"> By : Irna Purnahasanah | 20 1063 1170 014 </div>
+                </div>
+                
+                <div class="inputan">
+                    <label for="inderet"> Masukan banyaknya deret yang ingin di tampilkan </label>
+    
+                    <div class="inputin">
+                        <input type="number" class="input" name="deret" id="inderet" >
+                    </div>
+    
+                    <div class="button">
+                        <button onclick="fibonacci()" value="Tampilkan"> kirim </button>
+                    </div>
+                </div>
+    
+            </div>
+        </form>
+
+    </body>
+</html>
